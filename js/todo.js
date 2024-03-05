@@ -6,6 +6,10 @@ const TODOS_KEY = 'todos';
 
 let toDos = [];
 
+if (localStorage.getItem(USERNAME_KEY) === null) {
+  toDoForm.classList = 'hidden';
+}
+
 function saveToDos() {
   localStorage.setItem(TODOS_KEY, JSON.stringify(toDos));
 }
